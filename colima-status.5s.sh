@@ -9,8 +9,9 @@ STATUS=$($COLIMA_PATH status 2>&1)
 if echo "$STATUS" | grep -q "colima is running"; then
     echo "🐳"
     echo "---"
-    echo "Stop Colima | bash='$COLIMA_PATH stop' terminal=false refresh=true"
-    echo "Restart Colima | bash='$COLIMA_PATH restart' terminal=false refresh=true"
+    echo "🟢 Colima is running"
+    echo "⏹️ Stop Colima | bash='$COLIMA_PATH stop' terminal=false refresh=true"
+    echo "🔄 Restart Colima | bash='$COLIMA_PATH restart' terminal=false refresh=true"
 else
     exit 0
 fi
