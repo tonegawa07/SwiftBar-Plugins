@@ -10,8 +10,11 @@ if echo "$STATUS" | grep -q "colima is running"; then
     echo "🐳"
     echo "---"
     echo "🟢 Colima is running"
-    echo "⏹️ Stop Colima | bash='$COLIMA_PATH stop' terminal=false refresh=true"
-    echo "🔄 Restart Colima | bash='$COLIMA_PATH restart' terminal=false refresh=true"
+    echo "⏹️ Stop Colima | bash=\"$COLIMA_PATH\" param1=\"stop\" terminal=false refresh=true"
+    echo "🔄 Restart Colima | bash=\"$COLIMA_PATH\" param1=\"restart\" terminal=false refresh=true"
 else
-    exit 0
+    echo "🌊"
+    echo "---"
+    echo "🔴 Colima is stopped"
+    echo "▶️ Start Colima | bash=\"$COLIMA_PATH\" param1=\"start\" terminal=false refresh=true"
 fi
